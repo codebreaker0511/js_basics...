@@ -17,6 +17,8 @@ const res2 = arr
 console.log(res2)
 
 
-
+//reduce..
+const sm = arr.reduce( (acc , curr ) => acc + curr, 0)
+console.log(sm)
 
 //we are done with the basics now now let's start dom.. 
