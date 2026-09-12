@@ -1,1 +1,26 @@
-<script></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XHTML Req</title>
+    </head>
+    <body style="background-color: black; color: white;">
+        <p>
+            I am a student
+        </p>
+    </body>
+    <script>
+        const requestURL = 'https://api.github.com/users/codebreaker0511';
+        const xhr = new XMLHttpRequest(); 
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+            if(xhr.readyState == 4){
+                const data = JSON.parse(this.responseText);
+                console.log(typeof data);
+                console.log(data)
+                console.log(data.bio)
+            }
+        }
+        xhr.open('GET',requestURL)
+        xhr.send();
+    </script>
+</html>
